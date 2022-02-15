@@ -187,3 +187,71 @@
 //	}
 //	return 0;
 //}
+
+//喝汽水问题：一瓶汽水一元，2个空瓶可以换一瓶汽水，给20元可以买多少瓶汽水（编程实现）
+
+//方法1
+//int main()
+//{
+//	int money = 0;
+//	int total = 0;
+//	int empty = 0;
+//	scanf("%d", &money);
+//	total = money;
+//	empty = money;
+//	while (empty >= 2)
+//	{
+//		total += empty / 2;
+//		empty = empty / 2 + empty % 2;
+//	}
+//	printf("total = %d\n", total);
+//	return 0;
+//}
+
+//方法2
+//int main()
+//{
+//	int money = 0;
+//	int total = 0;
+//	scanf("%d", &money);
+//	if (money > 0)
+//	{
+//		total = 2 * money - 1;
+//	}
+//	printf("total = %d\n", total);
+//	return 0;
+//}
+
+//调整奇数偶数顺序（调整数组使奇数全部位于偶数前面）
+
+
+int main()
+{
+	int arr[] = { 2,1,3,3,13,5,5,7,11,9,13 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int i = 0;
+	for (i = 0; i < sz; i++)
+	{
+		if (arr[i] % 2 == 0)
+		{
+			int right = sz - 1;
+			while (i < right)
+			{
+				if (arr[right] % 2 == 1)
+				{
+					int tmp = arr[right];
+					arr[right] = arr[i];
+					arr[i] = tmp;
+					break;
+				}
+				else
+					right--;
+			}
+		}
+	}
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	return 0;
+}
