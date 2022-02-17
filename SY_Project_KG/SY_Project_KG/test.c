@@ -3,6 +3,8 @@
 #define GRD 3//定义节点等级最大值
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
+#include <time.h>
 
 //求一个节点周围四个次级节点坐标的函数
 //输入参数：初始节点的横坐标、纵坐标、存储其周围节点横坐标数组的地址、纵坐标数组的地址
@@ -74,8 +76,30 @@ void SRD_2(int x_o_o,int x_o, int y_o, int abs[], int ord[])
 	}
 }
 
+void RD(int abs[], int ord[], int sz)
+{
+	int i = 0;
+	if (sz == 4)
+	{
+		for (i = 0; i < sz; i++)
+		{
+			abs[i] = abs[i] + pow(-1, rand() % 2) * 4;
+			ord[i] = ord[i] + pow(-1, rand() % 2) * 4;
+		}
+	}
+	else
+	{
+		for (i = 0; i < sz; i++)
+		{
+			abs[i] = abs[i] + pow(-1, rand() % 2);
+			ord[i] = ord[i] + pow(-1, rand() % 2);
+		}
+	}
+}
+
 int main()
 {
+	srand((unsigned)time(NULL));
 	//定义中心节点
 	int x_o = ABS / 2;
 	int y_o = ORD / 2;
@@ -116,22 +140,83 @@ int main()
 			SRD_2(abs_1[3], abs_2[i], ord_2[i], abs_3 + 4 * i, ord_3 + 4 * i);
 		}
 	}
-	printf("一级节点坐标");
+	//直到这里，各级节点的准确坐标以及被算出存储在数组中了
+	//在这里添加一个人RD函数，给各级节点的坐标添加随机值
+	int sz_1 = 4, sz_2 = 16, sz_3 = 64;
+	RD(abs_1, ord_1, sz_1);
+	RD(abs_2, ord_2, sz_2);
+	RD(abs_3, ord_3, sz_3);
+
+	int abs_e[85] = { 0 };
+	int ord_e[85] = { 0 };
+	abs_e[0] = x_o;
+	ord_e[0] = y_o;
+	for (i = 0; i < 85; i++)
+	{
+		if (i == 1)
+		{
+			abs_e[i] = abs_1[0];
+			ord_e[i] = ord_1[0];
+		}
+
+	}
+
+	//printf("中心节点横坐标\n");
+	//printf("%d,\n", x_o);
+	//printf("一级节点横坐标\n");
+	//for (i = 0; i < 4; i++)
+	//{
+	//	printf("%d,", abs_1[i]);
+	//}
+	//printf("\n");
+	//printf("二级节点横坐标\n");
+	//for (i = 0; i < 16; i++)
+	//{
+	//	printf("%d,", abs_2[i]);
+	//}
+	//printf("\n");
+	//printf("三级节点横坐标\n");
+	//for (i = 0; i < 64; i++)
+	//{
+	//	printf("%d,", abs_3[i]);
+	//}
+
+	printf("中心节点纵坐标\n");
+	printf("%d,\n", y_o);
+	printf("一级节点纵坐标\n");
 	for (i = 0; i < 4; i++)
 	{
-		printf("（%d,%d）  ", abs_1[i], ord_1[i]);
+		printf("%d,", ord_1[i]);
 	}
 	printf("\n");
-	printf("二级节点坐标");
+	printf("二级节点纵坐标\n");
 	for (i = 0; i < 16; i++)
 	{
-		printf("（%d,%d）  ", abs_2[i], ord_2[i]);
+		printf("%d,", ord_2[i]);
 	}
 	printf("\n");
-	printf("三级节点坐标");
+	printf("三级节点纵坐标\n");
 	for (i = 0; i < 64; i++)
 	{
-		printf("（%d,%d）  ", abs_3[i], ord_3[i]);
+		printf("%d,", ord_3[i]);
 	}
+
+	/*printf("一级节点坐标\n");
+	for (i = 0; i < 4; i++)
+	{
+		printf("(%d,%d)", abs_1[i], ord_1[i]);
+	}
+	printf("\n");
+	printf("二级节点坐标\n");
+	for (i = 0; i < 16; i++)
+	{
+		printf("(%d,%d)", abs_2[i], ord_2[i]);
+	}
+	printf("\n");
+	printf("三级节点坐标\n");
+	for (i = 0; i < 64; i++)
+	{
+		printf("(%d,%d)", abs_3[i], ord_3[i]);
+	}*/
 	return 0;
 }
