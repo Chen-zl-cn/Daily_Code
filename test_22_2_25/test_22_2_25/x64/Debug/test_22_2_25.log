@@ -1,0 +1,3 @@
+﻿  test.c
+D:\C文件\日常练习\Daily_Code\test_22_2_25\test_22_2_25\test.c(51,18): warning C4013: “strlen”未定义；假设外部返回 int
+  test_22_2_25.vcxproj -> D:\C文件\日常练习\Daily_Code\test_22_2_25\x64\Debug\test_22_2_25.exe
