@@ -71,3 +71,5 @@ int main()
 	printf("%s", arr1);
 	return 0;
 }
+
+//找源码文件进行仿写
