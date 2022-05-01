@@ -1,11 +1,22 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <memory.h>
-#define MAX 500
+#include <string.h>
+#define MAX 1000
 #define NAME_MAX 20
 #define TELE_MAX 12
-#define SEX_MAX 5
+#define SEX_MAX 6
 #define ADDR_MAX 30
+
+enum Option
+{
+	EXIT,
+	ADD,
+	DEL,
+	SEARCH,
+	MODIFY,
+	SHOW,
+	SORT
+};
 
 //个人信息类型
 struct PeoInfo
@@ -28,3 +39,7 @@ struct Contact
 void InitContact(struct Contact* ps);
 void AddContact(struct Contact* ps);
 void ShowContact(const struct Contact* ps);
+void DelContact(struct Contact* ps);
+void SearchContact(struct Contact* ps);
+void ModifyContact(struct Contact* ps);
+void SortCont(struct Contact* ps);
