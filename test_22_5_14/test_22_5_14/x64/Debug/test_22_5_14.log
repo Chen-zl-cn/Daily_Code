@@ -1,0 +1,5 @@
+﻿  List.c
+  test.c
+  正在生成代码...
+D:\A编程\C_code\Daily_Code\test_22_5_14\test_22_5_14\List.c(29): warning C4715: “InsertList”: 不是所有的控件路径都返回值
+  test_22_5_14.vcxproj -> D:\A编程\C_code\Daily_Code\test_22_5_14\x64\Debug\test_22_5_14.exe
