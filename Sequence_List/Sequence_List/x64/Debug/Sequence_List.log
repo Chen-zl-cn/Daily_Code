@@ -1,2 +1,5 @@
 ﻿  SeqList.c
-  Sequence_List.vcxproj -> D:\A编程\CPLEX\Sequence_List\x64\Debug\Sequence_List.exe
+  test.c
+  正在生成代码...
+  LINK : 没有找到 D:\A_编程\C_Code\Daily_Code\Sequence_List\x64\Debug\Sequence_List.exe 或上一个增量链接没有生成它；正在执行完全链接
+  Sequence_List.vcxproj -> D:\A_编程\C_Code\Daily_Code\Sequence_List\x64\Debug\Sequence_List.exe
