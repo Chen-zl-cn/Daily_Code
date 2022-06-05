@@ -12,5 +12,7 @@ int main()
 	PrintList(L);
 	InsertList(L, 5, 7);
 	PrintList(L);
+	DelList(L, 5);
+	PrintList(L);
 	return 0;
 }

@@ -20,8 +20,10 @@ int GetLength(LinkList L);
 //遍历链表
 void PrintList(LinkList L);
 //按序号查找节点值
-int GetElem(LinkList L, int i);
+LNode* GetElem(LinkList L, int i);
 //按值查找表结点
 LNode* LocateElem(LinkList L, int e);
 //按序号插入结点
 void InsertList(LinkList L, int i, int e);
+//按序号删除链表中节点
+void DelList(LinkList L, int i);

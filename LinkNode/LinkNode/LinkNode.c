@@ -78,13 +78,13 @@ void PrintList(LinkList L)
 	printf("\n");
 }
 
-//按序号查找节点值
-int GetElem(LinkList L, int i)
+//按序号查找节点
+LNode* GetElem(LinkList L, int i)
 {
 	if (i<1 || i>GetLength(L))
 	{
 		printf("error");
-		return -1;
+		return NULL;
 	}
 	int j = 0;
 	LNode* p = L;
@@ -93,7 +93,7 @@ int GetElem(LinkList L, int i)
 		p = p->next;
 		j++;
 	}
-	return p->data;
+	return p;
 }
 
 //按值查找表结点
@@ -125,16 +125,26 @@ void InsertList(LinkList L, int i, int e)
 		}
 		else
 		{
-			LNode* p = L;
-			LNode* p0 = NULL;
-			while (i--)
-			{
-				p0 = p;
-				p = p->next;
-			}
+			LNode* p = GetElem(L, (i - 1));
 			tmp->data = e;
-			tmp->next = p;
-			p0->next = tmp;
+			tmp->next = GetElem(L, i);
+			p->next = tmp;
 		}
+	}
+}
+
+//按序号删除链表中节点
+void DelList(LinkList L, int i)
+{
+	if (i<1 || i>GetLength(L))
+	{
+		printf("error\n");
+	}
+	else
+	{
+		LNode* pi_0 = GetElem(L, (i - 1));
+		LNode* pi_1 = pi_0->next;
+		pi_0->next = pi_1->next;
+		free(pi_1);
 	}
 }
