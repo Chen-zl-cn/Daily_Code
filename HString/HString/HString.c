@@ -2,12 +2,7 @@
 
 //串赋值，将常量字符串T赋值给S
 int StrAssign(HString* S, char* T) {
-	int len = 0;
-	char* tmp = T;
-	while (*tmp) {
-		tmp++;
-		len++;
-	}
+	int len = (int)strlen(T);
 	if (len == 0) {
 		S->ch = NULL;
 		S->len = 0;

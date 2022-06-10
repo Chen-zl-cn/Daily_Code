@@ -1,8 +1,8 @@
 #include "HString.h"
 
 int main() {
-	char arr[] = "ababcabcd";
-	char arr_1[] = "abcd";
+	char arr[] = "When the beating of your heart Echoes the beating of the drums";
+	char arr_1[] = "of";
 	HString S;
 	HString T;
 	StrAssign(&S, arr);
