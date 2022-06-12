@@ -1,2 +1,5 @@
 ﻿  HString.c
+  test.c
+  正在生成代码...
+D:\A_编程\C_Code\Daily_Code\HString\HString\HString.c(75): warning C4715: “Index_KMP”: 不是所有的控件路径都返回值
   HString.vcxproj -> D:\A_编程\C_Code\Daily_Code\HString\x64\Debug\HString.exe

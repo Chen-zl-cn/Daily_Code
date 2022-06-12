@@ -7,6 +7,6 @@ int main() {
 	HString T;
 	StrAssign(&S, arr);
 	StrAssign(&T, arr_1);
-	printf("%d\n", Index(&S, &T));
+	printf("%d\n", Index_KMP(&S, &T));
 	return 0;
 }
