@@ -1,5 +1,5 @@
 ﻿  HString.c
+D:\A_编程\C_Code\Daily_Code\HString\HString\HString.c(58,49): warning C4133: “函数”: 从“HString *”到“const char *”的类型不兼容
   test.c
   正在生成代码...
-D:\A_编程\C_Code\Daily_Code\HString\HString\HString.c(75): warning C4715: “Index_KMP”: 不是所有的控件路径都返回值
   HString.vcxproj -> D:\A_编程\C_Code\Daily_Code\HString\x64\Debug\HString.exe

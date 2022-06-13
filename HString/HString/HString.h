@@ -10,5 +10,7 @@ typedef struct {
 
 //串赋值
 int StrAssign(HString* S, char* T);
-//定位操作
+//定位操作暴力匹配
 int Index(HString* S, HString* T);
+//定位操作，KMP
+int Index_KMP(HString* S, HString* T);
