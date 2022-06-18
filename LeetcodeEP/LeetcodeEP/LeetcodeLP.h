@@ -1,4 +1,5 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,3 +11,5 @@ int* runningSum_2(int* nums, int numsSize, int* returnSize);
 int canConstruct(char* ransomNote, char* magazine);
 //leetcode383_method_2
 int canConstruct_2(char* ransomNote, char* magazine);
+//leetcode412_method_1
+char** fizzBuzz(int n, int* returnSize);
