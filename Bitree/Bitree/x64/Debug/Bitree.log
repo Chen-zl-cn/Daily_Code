@@ -3,10 +3,20 @@ D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(15,29): warning C4133: “�
 D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(16,29): warning C4133: “函数”: 从“BiNode **”到“BiTree *”的类型不兼容
 D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(30,21): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
 D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(31,21): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
-D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(36,19): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
-D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(38,19): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
-D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(42,21): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
-D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(43,21): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
-D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(39): warning C4717: “InOrder”: 如递归所有控件路径，函数将导致运行时堆栈溢出
-D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(45): warning C4717: “PostOrder”: 如递归所有控件路径，函数将导致运行时堆栈溢出
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(42,17): warning C4133: “=”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(46,19): warning C4133: “=”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(52,19): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(54,19): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(58,21): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(59,21): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(66,37): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(66,72): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(82,31): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(82,56): warning C4133: “函数”: 从“BiNode *”到“BiTree”的类型不兼容
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(106,12): warning C4047: “return”:“BiTree”与“int”的间接级别不同
+  test.c
+  正在生成代码...
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(55): warning C4717: “InOrder”: 如递归所有控件路径，函数将导致运行时堆栈溢出
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(61): warning C4717: “PostOrder”: 如递归所有控件路径，函数将导致运行时堆栈溢出
+D:\A_编程\C_Code\Daily_Code\Bitree\Bitree\Bitree.c(102): warning C4715: “Push”: 不是所有的控件路径都返回值
   Bitree.vcxproj -> D:\A_编程\C_Code\Daily_Code\Bitree\x64\Debug\Bitree.exe
