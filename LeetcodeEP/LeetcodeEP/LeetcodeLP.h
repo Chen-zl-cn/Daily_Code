@@ -13,3 +13,9 @@ int canConstruct(char* ransomNote, char* magazine);
 int canConstruct_2(char* ransomNote, char* magazine);
 //leetcode412_method_1
 char** fizzBuzz(int n, int* returnSize);
+//leetcode876_method_1
+struct ListNode {
+	int val;
+	struct ListNode* next;
+};
+struct ListNode* middleNode(struct ListNode* head);

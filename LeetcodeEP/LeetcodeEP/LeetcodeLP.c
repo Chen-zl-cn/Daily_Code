@@ -81,6 +81,8 @@ int canConstruct_2(char* ransomNote, char* magazine) {
 //leetcode412_method_1
 char** fizzBuzz(int n, int* returnSize) {
     char** answer = (char**)malloc(sizeof(char*) * n);
+    if (answer == NULL)
+        return NULL;
     *returnSize = n;
     for (int j = 1; j < n + 1; j++)
     {
@@ -95,4 +97,26 @@ char** fizzBuzz(int n, int* returnSize) {
             sprintf(answer[j - 1], "%d", j);
     }
     return answer;
+}
+
+//leetcode876_method_1
+struct ListNode* middleNode(struct ListNode* head) {
+    int count = 0;
+    struct ListNode* p = head;
+    while (p->next) {
+        count++;
+        p = p->next;
+    }
+    p = head;
+    if (count % 2 == 0) {
+        for (int i = 0; i < count / 2; i++) {
+            p = p->next;
+        }
+    }
+    else {
+        for (int i = 0; i <= count / 2; i++) {
+            p = p->next;
+        }
+    }
+    return p;
 }
