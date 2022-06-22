@@ -1,2 +1,5 @@
-﻿  test.c
+﻿  LeetcodeLP.c
+D:\A_编程\C_Code\Daily_Code\LeetcodeEP\LeetcodeEP\LeetcodeLP.c(41,19): warning C4013: “strlen”未定义；假设外部返回 int
+D:\A_编程\C_Code\Daily_Code\LeetcodeEP\LeetcodeEP\LeetcodeLP.c(45,34): warning C4047: “=”:“char”与“char [2]”的间接级别不同
+D:\A_编程\C_Code\Daily_Code\LeetcodeEP\LeetcodeEP\LeetcodeLP.c(91,62): warning C4047: “=”:“char *”与“char **”的间接级别不同
   LeetcodeEP.vcxproj -> D:\A_编程\C_Code\Daily_Code\LeetcodeEP\x64\Debug\LeetcodeEP.exe

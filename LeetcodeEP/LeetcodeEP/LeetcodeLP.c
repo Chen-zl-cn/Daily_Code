@@ -86,15 +86,17 @@ char** fizzBuzz(int n, int* returnSize) {
     *returnSize = n;
     for (int j = 1; j < n + 1; j++)
     {
-        answer[j - 1] = (char**)malloc(sizeof(char*) * 9);
-        if (j % 3 == 0 && j % 5 == 0)
-            answer[j - 1] = "FizzBuzz";
-        else if (j % 3 == 0)
-            answer[j - 1] = "Fizz";
-        else if (j % 5 == 0)
-            answer[j - 1] = "Buzz";
-        else
-            sprintf(answer[j - 1], "%d", j);
+        if (j - 1 < n) {
+            answer[j - 1] = (char**)malloc(sizeof(char*) * 9);
+            if (j % 3 == 0 && j % 5 == 0)
+                answer[j - 1] = "FizzBuzz";
+            else if (j % 3 == 0)
+                answer[j - 1] = "Fizz";
+            else if (j % 5 == 0)
+                answer[j - 1] = "Buzz";
+            else
+                sprintf(answer[j - 1], "%d", j);
+        }
     }
     return answer;
 }
@@ -119,4 +121,13 @@ struct ListNode* middleNode(struct ListNode* head) {
         }
     }
     return p;
+}
+//leetcode876_method_2
+struct ListNode* middleNode_2(struct ListNode* head) {
+    struct ListNode* fast = head, *slow = head;
+    while (fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    return slow;
 }
