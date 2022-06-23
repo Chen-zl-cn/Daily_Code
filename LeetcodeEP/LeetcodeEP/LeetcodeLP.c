@@ -129,3 +129,32 @@ struct ListNode* middleNode_2(struct ListNode* head) {
     }
     return slow;
 }
+//leetcode1342_method_1
+int numberOfSteps(int num) {
+    int count = 0;
+    while (num) {
+        if (num % 2 == 0) {
+            num /= 2;
+            count++;
+        }
+        else {
+            num -= 1;
+            count++;
+        }
+    }
+    return count;
+}
+//leetcode1672_method_1
+int maximumWealth(int** accounts, int accountsSize, int* accountsColSize) {
+    int sum = 0;
+    for (int i = 0; i < accountsSize; i++) {
+        int tmp = 0;
+        for (int j = 0; j < *accountsColSize; j++) {
+            tmp += accounts[i][j];
+        }
+        if (tmp >= sum) {
+            sum = tmp;
+        }
+    }
+    return sum;
+}
