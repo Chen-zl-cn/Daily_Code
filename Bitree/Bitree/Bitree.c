@@ -18,7 +18,7 @@ int CreatBiT(BiTree* root) {
 }
 
 //访问结点数据
-void visit(BiTree T) {
+void visit(BiTNode* T) {
 	if(T!=NULL)
 		printf("%d ", T->data);
 }
@@ -58,6 +58,21 @@ void PostOrder(BiTree T) {
 	PostOrder(T->lchild);
 	PostOrder(T->rchild);
 	visit(T);
+}
+//层次遍历二叉树
+void LevelOrder(BiTree T) {
+	LinkQueue Q;
+	InitQueue(&Q);
+	BiTree p = NULL;
+	EnQueue(&Q, T);
+	while (Q.front != Q.rear) {
+		p = DeQueue(&Q);
+		visit(p);
+		if (p->lchild != NULL)
+			EnQueue(&Q, p->lchild);
+		if (p->rchild != NULL)
+			EnQueue(&Q, p->rchild);
+	}
 }
 //求二叉树深度
 int GetBiTDepth(BiTree T) {
@@ -109,4 +124,33 @@ BiTree Pop(Top T) {
 	T->next = tmp_p->next;
 	free(tmp_p);
 	return e;
+}
+
+//初始化队列
+void InitQueue(LinkQueue* Q) {
+	Q->front = Q->rear = (LinkNode*)malloc(sizeof(LinkNode));
+	if (Q->front != NULL)
+		Q->front->next = NULL;
+}
+//入队
+void EnQueue(LinkQueue* Q, BiTNode* e) {
+	LinkNode* p = (LinkNode*)malloc(sizeof(LinkNode));
+	if (p != NULL) {
+		p->data = e;
+		p->next = NULL;
+		Q->rear->next = p;
+		Q->rear = p;
+	}
+}
+//出队
+BiTNode* DeQueue(LinkQueue* Q) {
+	if (Q->front == Q->rear)
+		return NULL;
+	LinkNode* tmp = Q->front->next;
+	BiTNode* ret = tmp->data;
+	Q->front->next = tmp->next;
+	if (Q->rear == tmp)
+		Q->rear = Q->front;
+	free(tmp);
+	return ret;
 }

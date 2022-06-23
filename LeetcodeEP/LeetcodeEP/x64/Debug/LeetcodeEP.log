@@ -1,5 +1,7 @@
 ﻿  LeetcodeLP.c
-D:\A_编程\C_Code\Daily_Code\LeetcodeEP\LeetcodeEP\LeetcodeLP.c(41,19): warning C4013: “strlen”未定义；假设外部返回 int
-D:\A_编程\C_Code\Daily_Code\LeetcodeEP\LeetcodeEP\LeetcodeLP.c(45,34): warning C4047: “=”:“char”与“char [2]”的间接级别不同
-D:\A_编程\C_Code\Daily_Code\LeetcodeEP\LeetcodeEP\LeetcodeLP.c(91,62): warning C4047: “=”:“char *”与“char **”的间接级别不同
+D:\A_编程\C_Code\Daily_Code\LeetcodeEP\LeetcodeEP\LeetcodeLP.c(44,34): warning C4047: “=”:“char”与“char [2]”的间接级别不同
+D:\A_编程\C_Code\Daily_Code\LeetcodeEP\LeetcodeEP\LeetcodeLP.c(40,19): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\A_编程\C_Code\Daily_Code\LeetcodeEP\LeetcodeEP\LeetcodeLP.c(89,58): warning C4047: “=”:“char *”与“char **”的间接级别不同
+  test.c
+  正在生成代码...
   LeetcodeEP.vcxproj -> D:\A_编程\C_Code\Daily_Code\LeetcodeEP\x64\Debug\LeetcodeEP.exe
