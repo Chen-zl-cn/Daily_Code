@@ -29,3 +29,8 @@ int numberOfSteps(int num);
 
 //leetcode1672_method_1
 int maximumWealth(int** accounts, int accountsSize, int* accountsColSize);
+
+//leetcode1700_method_1
+int countStudents(int* students, int studentsSize, int* sandwiches, int sandwichesSize);
+//leetcode1700_method_2
+int countStudents_2(int* students, int studentsSize, int* sandwiches, int sandwichesSize);

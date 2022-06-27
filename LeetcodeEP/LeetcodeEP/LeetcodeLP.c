@@ -158,3 +158,53 @@ int maximumWealth(int** accounts, int accountsSize, int* accountsColSize) {
     }
     return sum;
 }
+//leetcode1700_method_1
+int countStudents(int* students, int studentsSize, int* sandwiches, int sandwichesSize) {
+    while (1) {
+        if (students[0] == sandwiches[0]) {
+            students++;
+            sandwiches++;
+            studentsSize--;
+            sandwichesSize--;
+        }
+        else if (students[0] != sandwiches[0]) {
+            int tmp = students[0];
+            for (int j = 1; j < studentsSize; j++) {
+                students[j - 1] = students[j];
+            }
+            students[studentsSize - 1] = tmp;
+        }
+        int i = 0;
+        for (i = 0; i < studentsSize; i++) {
+            if (students[i] != sandwiches[0]) {
+                ;
+            }
+            else {
+                break;
+            }
+        }
+        if (i == studentsSize) {
+            break;
+        }
+    }
+    return studentsSize;
+}
+//leetcode1700_method_2
+int countStudents_2(int* students, int studentsSize, int* sandwiches, int sandwichesSize) {
+    int count = 0;
+    while (1) {
+        int i = 0;
+        for (i = 0; i < studentsSize; i++) {
+            if (students[i] == sandwiches[0]) {
+                students[i] = 3;
+                sandwiches++;
+                count++;
+                break;
+            }
+        }
+        if (i == studentsSize) {
+            break;
+        }
+    }
+    return studentsSize - count;
+}
